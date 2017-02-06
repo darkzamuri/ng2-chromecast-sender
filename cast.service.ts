@@ -53,7 +53,7 @@ export class CastService {
     sessionListener(e: any) {
         this.session = e;
         if (this.session.sessionId) {
-            let example = { activeSlideShow: this.session.statusText, castName: e.receiver.friendlyName };
+            let example = { status: this.session.statusText, castName: e.receiver.friendlyName };
             this.updateReceiver(example);
             this.addListeners();
         }
